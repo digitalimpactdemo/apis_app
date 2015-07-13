@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    
+    <bean id="apis.services.emailservice" class="oracle.digitalimpact.demo.apis.services.EmailService" init-method="init" destroy-method="destroy">
+        <property name="htmlMime"           value="true"/>
+        <property name="smtpHost"           value="smtp.gmail.com"/>
+        <property name="smtpPort"           value="465"/>
+        <property name="authUser"           value="digitalimpactdemo@gmail.com"/>
+        <property name="fromAddress"        value="digitalimpactdemo@gmail.com"/>
+        <property name="authPwd"            value="D1g1t@l357#"/>
+        <property name="emailTemplateUrl"   value="http://sites.digitalimpactdemo.com:9111/sites/digital/welcome_email.html"/>
+        <property name="httpClientService">
+            <bean class="oracle.digitalimpact.demo.apis.services.HttpClientService" />
+        </property>
+    </bean>
+    
+</beans>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    
+    <bean id="apis.context.aware" class="oracle.digitalimpact.demo.apis.context.APIContextAware"/>
+    
+    <import resource="classpath:/config/spring/spring_config_mail_service.xml" />
+    
+    <bean id="scheduler.task" class="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler"/>
+    
+    <bean id="apis.services.mongoservice" class="oracle.digitalimpact.demo.apis.services.MongoService" init-method="init" destroy-method="destroy">
+        <property name="serverHost"   value="localhost"/>
+        <property name="serverPort"   value="27017"/>
+        <property name="databaseName" value="digitalimpact"/>
+        <property name="collectionNames">
+            <list>
+                <value>context_master</value>
+                <value>beacon_master</value>
+                <value>context_beacon_mapping</value>
+                <value>demo_users</value>
+                <value>messages</value>
+                <value>demo_users</value>
+                <value>engage</value>
+            </list>
+        </property>
+        <property name="recreateDatabase" value="true"/>
+    </bean>
+
+    <bean id="apis.services.contextservice" class="oracle.digitalimpact.demo.apis.services.ContextService">
+        <property name="mongoService" ref="apis.services.mongoservice"/>
+    </bean>
+    <bean id="apis.services.userservice" class="oracle.digitalimpact.demo.apis.services.UserService" init-method="init" destroy-method="destroy" depends-on="apis.services.mongoservice">
+        <property name="mongoService"       ref="apis.services.mongoservice"/>
+        <property name="emailService"       ref="apis.services.emailservice"/>
+        <property name="scheduler"          ref="scheduler.task"/>
+        <property name="timeInMilliSecs"    value="5000"/>
+    </bean>
+    <bean id="apis.services.beaconservice" class="oracle.digitalimpact.demo.apis.services.BeaconService">
+        <property name="mongoService" ref="apis.services.mongoservice"/>
+    </bean>
+    <bean id="apis.services.notificationservice" class="oracle.digitalimpact.demo.apis.services.NotificationService">
+        <property name="mongoService" ref="apis.services.mongoservice"/>
+        <property name="userService" ref="apis.services.userservice"/>
+    </bean>
+    <bean id="apis.services.securityservice" class="oracle.digitalimpact.demo.apis.services.SecurityService">
+        <property name="userService" ref="apis.services.userservice"/>
+    </bean>
+    <bean id="apis.services.rssparserservice" class="oracle.digitalimpact.demo.apis.services.RSSParserService" init-method="init">
+        <property name="rssFeeds">
+            <list>
+                <value>http://feeds.delicious.com/v2/rss/OracleTechnologyNetwork/otnheadlines</value>
+                <value>http://blogs.oracle.com/partnernews/feed/entries/rss?cat=Middleware</value>
+            </list>
+        </property>
+    </bean>
+
+
+</beans>

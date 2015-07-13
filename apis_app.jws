@@ -1,0 +1,1215 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <value n="application-package-prefix" v="oracle.digitalimpact.demo.apis"/>
+   <value n="appTemplateId" v="#genericApplicationTemplate"/>
+   <hash n="component-versions">
+      <value n="oracle.adf.share.dt.migration.jps.JaznCredStoreMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.adf.share.dt.migration.wsm.PolicyAttachmentMigratorHelper" v="12.1.2.0.0"/>
+      <value n="oracle.adfdt.controller.adfc.source.migration.SavePointDataSourceForWLSMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.adfdtinternal.model.ide.security.extension.AdfSecurityMigrator" v="11.1.1.1.0.13"/>
+      <value n="oracle.adfdtinternal.model.ide.security.wizard.AdfSecurityMigrator" v="11.1.1.1.0.13"/>
+      <value n="oracle.ide.model.Project" v="11.1.1.1.0;12.1.3.0.0"/>
+      <value n="oracle.jbo.dt.jdevx.deployment.JbdProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.appresources.ApplicationSrcDirMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.deploy.ear.OarMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.deploy.mar.MarMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.jdevimpl.deploy.migrators.JeeDeploymentMigrator" v="12.1.2.0.0"/>
+      <value n="oracle.jdevimpl.xml.oc4j.jps.JpsConfigMigratorHelper" v="11.1.1.1.0.1"/>
+      <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.mds.internal.dt.deploy.base.MarMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.mds.internal.dt.ide.migrator.MDSConfigMigratorHelper" v="11.1.1.0.5313"/>
+      <value n="oracle.webcenter.internal.dt.migration.WebCenterWorkspaceMigrator" v="11.1.1.4.0.101019.0800"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.mds.internal.dt.ide.appresources.MDSAppResourceCSProvider/MDSAppContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationBuildToolContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/MobileResourcesContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
+   </list>
+   <list n="listOfChildren">
+      <hash><url n="URL" path="apis_web/apis_web.jpr"/></hash>
+   </list>
+   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
+      <hash n="profileDefinitions">
+         <hash n="apis_ear">
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="false"/>
+            </hash>
+            <hash n="dependencies">
+               <list n="dependencyList">
+                  <hash>
+                     <value n="adapterClass" v="oracle.jdevimpl.deploy.common.ArchiveProfileDependable"/>
+                     <url n="ownerURL" path="apis_web/apis_web.jpr"/>
+                     <value n="pathInEar" v=""/>
+                     <value n="profileName" v="apis_web"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="earURL" path="deploy/apis_ear.ear"/>
+            <value n="enterpriseAppName" v="apis_ear"/>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="9"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Application Descriptors"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="**"/>
+                              <value n="type" v="0"/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="ear-metainf"/>
+                     <value n="type" v="1"/>
+                  </hash>
+                  <hash>
+                     <value n="displayName" v="Application Libraries"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="pattern" v="**"/>
+                              <value n="type" v="0"/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="libraries"/>
+                     <list n="selectedLibraries"/>
+                     <value n="targetWithinJar" v="lib"/>
+                     <value n="type" v="3"/>
+                  </hash>
+               </list>
+            </hash>
+            <value n="profileClass" v="oracle.jdeveloper.deploy.ear.EarProfile"/>
+            <value n="profileName" v="apis_ear"/>
+         </hash>
+      </hash>
+      <list n="profileList">
+         <string v="apis_ear"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
+      <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
+         <url n="pomfileURL" path="pom.xml"/>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.model.ApplicationLibraries">
+      <hash n="internalDefinitions">
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-core/3.2.2.RELEASE/spring-core-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-core:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-core:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-context/3.2.2.RELEASE/spring-context-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-context:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-context:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/mongodb/mongo-java-driver/2.11.0/mongo-java-driver-2.11.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.mongodb:mongo-java-driver:2.11.0:jar"/>
+               <value n="id" v="org.mongodb:mongo-java-driver:2.11.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/data/spring-data-mongodb/1.2.0.RELEASE/spring-data-mongodb-1.2.0.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.data:spring-data-mongodb:1.2.0.RELEASE:jar"/>
+               <value n="id" v="org.springframework.data:spring-data-mongodb:1.2.0.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}cglib/cglib/2.2.2/cglib-2.2.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="cglib:cglib:2.2.2:jar"/>
+               <value n="id" v="cglib:cglib:2.2.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-mvc/3.2.2.RELEASE/spring-mvc-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-mvc:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-mvc:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-webmvc/3.2.2.RELEASE/spring-webmvc-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-webmvc:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-webmvc:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-web/3.2.2.RELEASE/spring-web-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-web:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-web:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-beans/3.2.2.RELEASE/spring-beans-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-beans:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-beans:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/sun/jersey/jersey-server/1.8/jersey-server-1.8.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.sun.jersey:jersey-server:1.8:jar"/>
+               <value n="id" v="com.sun.jersey:jersey-server:1.8:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/sun/jersey/jersey-json/1.8/jersey-json-1.8.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.sun.jersey:jersey-json:1.8:jar"/>
+               <value n="id" v="com.sun.jersey:jersey-json:1.8:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}javax/ws/rs/jsr311-api/1.0/jsr311-api-1.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="javax.ws.rs:jsr311-api:1.0:jar"/>
+               <value n="id" v="javax.ws.rs:jsr311-api:1.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/data-commons/spring-data-mongodb/1.2.0.RELEASE/spring-data-mongodb-1.2.0.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.data-commons:spring-data-mongodb:1.2.0.RELEASE:jar"/>
+               <value n="id" v="org.springframework.data-commons:spring-data-mongodb:1.2.0.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/data/spring-data-commons/1.2.0.RELEASE/spring-data-commons-1.2.0.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.data:spring-data-commons:1.2.0.RELEASE:jar"/>
+               <value n="id" v="org.springframework.data:spring-data-commons:1.2.0.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/data/spring-data-commons/1.5.0.RELEASE/spring-data-commons-1.5.0.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.data:spring-data-commons:1.5.0.RELEASE:jar"/>
+               <value n="id" v="org.springframework.data:spring-data-commons:1.5.0.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="commons-logging:commons-logging:1.1.1:jar"/>
+               <value n="id" v="commons-logging:commons-logging:1.1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-ex/3.2.2.RELEASE/spring-ex-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-ex:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-ex:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-exp/3.2.2.RELEASE/spring-exp-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-exp:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-exp:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-expressuion/3.2.2.RELEASE/spring-expressuion-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-expressuion:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-expressuion:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-expression/3.2.2.RELEASE/spring-expression-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-expression:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-expression:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-xml-databind/0.6.2/jackson-xml-databind-0.6.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-xml-databind:0.6.2:jar"/>
+               <value n="id" v="com.fasterxml:jackson-xml-databind:0.6.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/sun/jersey/jersey-core/1.8/jersey-core-1.8.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.sun.jersey:jersey-core:1.8:jar"/>
+               <value n="id" v="com.sun.jersey:jersey-core:1.8:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/sun/jersey/jersey-client/1.8/jersey-client-1.8.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.sun.jersey:jersey-client:1.8:jar"/>
+               <value n="id" v="com.sun.jersey:jersey-client:1.8:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-c/0.6.2/jackson-c-0.6.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-c:0.6.2:jar"/>
+               <value n="id" v="com.fasterxml:jackson-c:0.6.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core/0.6.2/jackson-core-0.6.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core:0.6.2:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core:0.6.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/0.6.2/jackson-annotations-0.6.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:0.6.2:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:0.6.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core/1.6.2/jackson-core-1.6.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core:1.6.2:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core:1.6.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core/1.1.2/jackson-core-1.1.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core:1.1.2:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core:1.1.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core/1.1.1/jackson-core-1.1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core:1.1.1:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core:1.1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/1.612/jackson-annotations-1.612.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:1.612:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:1.612:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/1.6112/jackson-annotations-1.6112.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:1.6112:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:1.6112:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/1.611/jackson-annotations-1.611.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:1.611:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:1.611:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core-asl/1.1.1/jackson-core-asl-1.1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core-asl:1.1.1:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core-asl:1.1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/1.1.1/jackson-annotations-1.1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:1.1.1:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:1.1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/2.1.1/jackson-annotations-2.1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:2.1.1:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:2.1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/2.12.1/jackson-annotations-2.12.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:2.12.1:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:2.12.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/2.2.1/jackson-annotations-2.2.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:2.2.1:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:2.2.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:2.2.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:2.2.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core-asl/2.2.3/jackson-core-asl-2.2.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core-asl:2.2.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core-asl:2.2.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-xml-databind/2.2.3/jackson-xml-databind-2.2.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-xml-databind:2.2.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-xml-databind:2.2.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core-asl/2.5.3/jackson-core-asl-2.5.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core-asl:2.5.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core-asl:2.5.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-xml-databind/2.3/jackson-xml-databind-2.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-xml-databind:2.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-xml-databind:2.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-xml-databind/2.5.3/jackson-xml-databind-2.5.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-xml-databind:2.5.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-xml-databind:2.5.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/2.3/jackson-annotations-2.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:2.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:2.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-annotations/2.5.3/jackson-annotations-2.5.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-annotations:2.5.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-annotations:2.5.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-databind/2.5.3/jackson-databind-2.5.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-databind:2.5.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-databind:2.5.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson-core/2.5.3/jackson-core-2.5.3.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml:jackson-core:2.5.3:jar"/>
+               <value n="id" v="com.fasterxml:jackson-core:2.5.3:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-annotations/2.6.0-rc2-SNAPSHOT/jackson-annotations-2.6.0-rc2-SNAPSHOT.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc2-SNAPSHOT:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-annotations:2.6.0-rc2-SNAPSHOT:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-core/2.6.0-rc2-SNAPSHOT/jackson-core-2.6.0-rc2-SNAPSHOT.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-core:2.6.0-rc2-SNAPSHOT:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-core:2.6.0-rc2-SNAPSHOT:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-annotations/2.00/jackson-annotations-2.00.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-annotations:2.00:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-annotations:2.00:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-core/2.0.0/jackson-core-2.0.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-core:2.0.0:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-core:2.0.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-databind/2.0.0/jackson-databind-2.0.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-databind:2.0.0:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-databind:2.0.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-annotation/2.0.0/jackson-annotation-2.0.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-annotation:2.0.0:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-annotation:2.0.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-annotations/2.1.0/jackson-annotations-2.1.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-annotations:2.1.0:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-annotations:2.1.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/jsondoc/jsondoc-springmvc/1.1.14/jsondoc-springmvc-1.1.14.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.jsondoc:jsondoc-springmvc:1.1.14:jar"/>
+               <value n="id" v="org.jsondoc:jsondoc-springmvc:1.1.14:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/jsondoc/jsondoc-ui/1.1.14/jsondoc-ui-1.1.14.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.jsondoc:jsondoc-ui:1.1.14:jar"/>
+               <value n="id" v="org.jsondoc:jsondoc-ui:1.1.14:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/jsondoc/jsondoc-core/1.1.14/jsondoc-core-1.1.14.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.jsondoc:jsondoc-core:1.1.14:jar"/>
+               <value n="id" v="org.jsondoc:jsondoc-core:1.1.14:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.slf4j:slf4j-api:1.7.12:jar"/>
+               <value n="id" v="org.slf4j:slf4j-api:1.7.12:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/reflections/slf4j-api/1.7.12/slf4j-api-1.7.12.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.reflections:slf4j-api:1.7.12:jar"/>
+               <value n="id" v="org.reflections:slf4j-api:1.7.12:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/reflections/reflections/1.7.12/reflections-1.7.12.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.reflections:reflections:1.7.12:jar"/>
+               <value n="id" v="org.reflections:reflections:1.7.12:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/reflections/reflections/0.9./reflections-0.9..jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.reflections:reflections:0.9.:jar"/>
+               <value n="id" v="org.reflections:reflections:0.9.:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/reflections/reflections/0.9.8/reflections-0.9.8.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.reflections:reflections:0.9.8:jar"/>
+               <value n="id" v="org.reflections:reflections:0.9.8:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}javax/servlet/jstl/1.2/jstl-1.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="javax.servlet:jstl:1.2:jar"/>
+               <value n="id" v="javax.servlet:jstl:1.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}jstl/jstl/1.2/jstl-1.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="jstl:jstl:1.2:jar"/>
+               <value n="id" v="jstl:jstl:1.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}taglibs/standard/1.1.2/standard-1.1.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="taglibs:standard:1.1.2:jar"/>
+               <value n="id" v="taglibs:standard:1.1.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}javax/mail/mail/1.4/mail-1.4.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="javax.mail:mail:1.4:jar"/>
+               <value n="id" v="javax.mail:mail:1.4:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}javax/activation/activation/1.0.2/activation-1.0.2.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="javax.activation:activation:1.0.2:jar"/>
+               <value n="id" v="javax.activation:activation:1.0.2:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/apache/commons/commons-csv/1.1/commons-csv-1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.apache.commons:commons-csv:1.1:jar"/>
+               <value n="id" v="org.apache.commons:commons-csv:1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}junit/junit/4.12/junit-4.12.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="junit:junit:4.12:jar"/>
+               <value n="id" v="junit:junit:4.12:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}commons-io/commons-io/2.4/commons-io-2.4.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="commons-io:commons-io:2.4:jar"/>
+               <value n="id" v="commons-io:commons-io:2.4:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/apache/commons/commons-io/2.4/commons-io-2.4.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.apache.commons:commons-io:2.4:jar"/>
+               <value n="id" v="org.apache.commons:commons-io:2.4:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="commons-httpclient:commons-httpclient:3.1:jar"/>
+               <value n="id" v="commons-httpclient:commons-httpclient:3.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}commons-codec/commons-codec/1.10/commons-codec-1.10.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="commons-codec:commons-codec:1.10:jar"/>
+               <value n="id" v="commons-codec:commons-codec:1.10:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/rometools/rome/1.5.0-SNAPSHOT/rome-1.5.0-SNAPSHOT.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.rometools:rome:1.5.0-SNAPSHOT:jar"/>
+               <value n="id" v="com.rometools:rome:1.5.0-SNAPSHOT:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/rometools/rome/1.5.0/rome-1.5.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.rometools:rome:1.5.0:jar"/>
+               <value n="id" v="com.rometools:rome:1.5.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/rometools/rome/1.0/rome-1.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.rometools:rome:1.0:jar"/>
+               <value n="id" v="com.rometools:rome:1.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}rome/rome/1.0/rome-1.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="rome:rome:1.0:jar"/>
+               <value n="id" v="rome:rome:1.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}jdom/jdom/1.1/jdom-1.1.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="jdom:jdom:1.1:jar"/>
+               <value n="id" v="jdom:jdom:1.1:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-core/3.2.2.RELEASE/spring-security-core-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-core:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-core:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-config/3.2.2.RELEASE/spring-security-config-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-config:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-config:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-web/3.2.2.RELEASE/spring-security-web-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-web:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-web:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-aop/3.2.2.RELEASE/spring-aop-3.2.2.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-aop:3.2.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-aop:3.2.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-core/3.1.1.RELEASE/spring-core-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-core:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-core:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-expression/3.1.1.RELEASE/spring-expression-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-expression:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-expression:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-context/3.1.1.RELEASE/spring-context-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-context:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-context:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-core/3.1.1.RELEASE/spring-security-core-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-core:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-core:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-config/3.1.1.RELEASE/spring-security-config-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-config:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-config:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-aop/3.1.1.RELEASE/spring-aop-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-aop:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-aop:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-web/3.1.1.RELEASE/spring-security-web-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-web:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-web:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-web/3.1.1.RELEASE/spring-web-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-web:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-web:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-webmvc/3.1.1.RELEASE/spring-webmvc-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-webmvc:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-webmvc:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-beans/3.1.1.RELEASE/spring-beans-3.1.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-beans:3.1.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-beans:3.1.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-core/4.1.6.RELEASE/spring-core-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-core:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-core:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-expression/4.1.6.RELEASE/spring-expression-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-expression:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-expression:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-context/4.1.6.RELEASE/spring-context-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-context:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-context:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-core/4.1.6.RELEASE/spring-security-core-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-core:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-core:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-config/4.1.6.RELEASE/spring-security-config-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-config:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-config:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-aop/4.1.6.RELEASE/spring-aop-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-aop:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-aop:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-web/4.1.6.RELEASE/spring-security-web-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-web:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-web:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-web:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-web:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-webmvc/4.1.6.RELEASE/spring-webmvc-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-webmvc:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-webmvc:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/spring-beans/4.1.6.RELEASE/spring-beans-4.1.6.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework:spring-beans:4.1.6.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-beans:4.1.6.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-core/4.0.1.RELEASE/spring-security-core-4.0.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-core:4.0.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-core:4.0.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-config/4.0.1.RELEASE/spring-security-config-4.0.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-config:4.0.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-config:4.0.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}org/springframework/security/spring-security-web/4.0.1.RELEASE/spring-security-web-4.0.1.RELEASE.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="org.springframework.security:spring-security-web:4.0.1.RELEASE:jar"/>
+               <value n="id" v="org.springframework.security:spring-security-web:4.0.1.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-databind/2.1.0/jackson-databind-2.1.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-databind:2.1.0:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-databind:2.1.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="/${maven:maven.local.repo}com/fasterxml/jackson/core/jackson-core/2.5.0/jackson-core-2.5.0.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.fasterxml.jackson.core:jackson-core:2.5.0:jar"/>
+               <value n="id" v="com.fasterxml.jackson.core:jackson-core:2.5.0:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+         </list>
+      </hash>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="org.springframework:spring-core:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework:spring-expression:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework:spring-context:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework.security:spring-security-core:4.0.1.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework.security:spring-security-config:4.0.1.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework.security:spring-security-web:4.0.1.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework:spring-aop:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework:spring-web:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework:spring-webmvc:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework:spring-beans:4.1.6.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.mongodb:mongo-java-driver:2.11.0:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework.data:spring-data-commons:1.5.0.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.springframework.data:spring-data-mongodb:1.2.0.RELEASE:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="commons-logging:commons-logging:1.1.1:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="cglib:cglib:2.2.2:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="javax.ws.rs:jsr311-api:1.0:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.sun.jersey:jersey-server:1.8:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.sun.jersey:jersey-json:1.8:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.sun.jersey:jersey-core:1.8:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.sun.jersey:jersey-client:1.8:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.fasterxml.jackson.core:jackson-annotations:2.1.0:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.fasterxml.jackson.core:jackson-core:2.5.0:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.fasterxml.jackson.core:jackson-databind:2.1.0:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="jstl:jstl:1.2:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="taglibs:standard:1.1.2:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="javax.mail:mail:1.4:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="org.apache.commons:commons-csv:1.1:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="commons-io:commons-io:2.4:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="junit:junit:4.12:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="commons-httpclient:commons-httpclient:3.1:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="commons-codec:commons-codec:1.10:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="rome:rome:1.0:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="jdom:jdom:1.1:jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="ApplicationSrcContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/main/resources/"/>
+         </list>
+      </hash>
+   </hash>
+</jws:workspace>
